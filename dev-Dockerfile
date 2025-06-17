@@ -1,0 +1,5 @@
+FROM ruby:3.4.4-alpine
+
+ENV LANG=C.UTF-8
+
+RUN apk --update add nodejs build-base libstdc++ gzip git zlib-dev libcurl

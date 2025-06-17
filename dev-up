@@ -1,0 +1,9 @@
+
+# setup: {
+#  docker run -it --rm -v $PWD:/app devdocs-dev sh
+#     \_ run: `gem install bundler && bundle install --system --without test`
+#  docker commit ?? devdocs-dev-0
+# }
+
+echo "open at http://devdocs-dev-0.orb.local"
+docker run --name devdocs-dev-0 -it --rm -v $PWD:/app devdocs-dev-0 sh -c 'cd app && rackup -o 0.0.0.0 -p 80'
